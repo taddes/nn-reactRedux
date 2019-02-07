@@ -45,4 +45,19 @@ render(
 )
 
 8. Changing State and 'this'
+-Context of this is from how/where it is called, not where it sits (not always what you'd expect)
+-Old react versions bound 'this' to component instance of our functions, but this has been removed (class components)
+-Therefore, must manually bind this context to functions
+-in render(), this is automatically bound-
+-reaction to DOM events is not bound.
+**easiest solution: USE AN ARROW FUNCTION!
+
+-ARROW FUNCTIONS bind the value of this to whatever the value of this is outside the function (within the class component instance)
+
+-DONT EVER JUST CHANGE STATE DIRECTLY Ex. this.state.name = 'Name'
+Use .setState method
+
+9. User Input and Forms
+
+-best to use onSubmit, as it covers a click or enter for form submission!
 
