@@ -1,0 +1,31 @@
+NetNinja - React & Redux
+
+Core Purpose:
+JS Library that renders COMPONENTS the DOM dynamically. Manages and REACTS to STATE
+Components combined, creates JS representation called Virtual DOM.  Updates changes dynamically based on changes.
+STATE triggers updates.
+
+Two part:
+React
+ReactDOM
+
+class App extents React.Component {
+  state = {
+    name: 'Taddes',
+    age: 30
+  }
+  render(){
+    return{
+      <p>YO {this.state.name} I am {this.state.age}</p>
+    }
+  }
+}
+
+Default root render :   ReactDOM.render(<App />, document.getElementById('app'))
+
+5. STATE
+State of the data in the UI and can be updated
+State is most often an object with items of key value pairs of properties and values (local data).
+Storing local data of that given Component.
+State updates to reflect a triggered change, output dynamically.
+Similar to data() property in Vue component
