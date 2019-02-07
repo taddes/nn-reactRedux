@@ -60,4 +60,5 @@ Use .setState method
 9. User Input and Forms
 
 -best to use onSubmit, as it covers a click or enter for form submission!
+Chain onSubmit into the <form>, not submission button! Better practice.
 
