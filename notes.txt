@@ -29,3 +29,20 @@ State is most often an object with items of key value pairs of properties and va
 Storing local data of that given Component.
 State updates to reflect a triggered change, output dynamically.
 Similar to data() property in Vue component
+
+7. DOM Events
+
+Changing State updates the dom, re-renders it to DOM
+Reference functions(methods) above render() and then reference this.methodName as a registered Events
+-React has lots of pre-built event handlers. All can access the e 'event' object as is standard with normal JS
+
+handleClick(e){
+  console.log(e.target)
+}
+
+render(
+   <button onClick={this.handleClick}>Click Me</button>
+)
+
+8. Changing State and 'this'
+
