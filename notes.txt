@@ -62,3 +62,59 @@ Use .setState method
 -best to use onSubmit, as it covers a click or enter for form submission!
 Chain onSubmit into the <form>, not submission button! Better practice.
 
+10. Create React App
+-A CLI tool to create React apps
+  -Dev server
+  -ES6 features that are not normally supported in browsers
+  -Keep our code modular
+  -Access to build tools to create optimized code for deployment
+
+
+11. SPA - Single Page Applications
+-React apps are typically SPAs
+-Only ever on ehTML page served to browsers
+-React controls what a user sees on page
+
+By contrast, a typical multi page app requires multiple requests to server to
+serve up other pages.
+
+SPA's still make the initial request, but by contrast, react takes over the app once 
+the index is delivered. All requests are handled by React, rendering different components.
+Saves us trips from client to server and back again. 
+
+Public folder contains the contents that will be served up when requested by server. Initial Index file
+
+SRC folder is the container for all relevant components:
+
+  -App.js holds the root <App /> component
+  class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>Edit <code>src/App.js</code> and save to reload.</p>
+          <a>Learn React</a>
+        </header>
+      </div>
+    );
+  }
+}
+export default App;
+
+  -index.js:
+    Pulls in the root component, React and ReactDOM, Renders the App to given 'root' id
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import './index.css';
+    import App from './App';
+    import * as serviceWorker from './serviceWorker';
+
+  ReactDOM.render(<App />, document.getElementById('root'));
+
+  -To Run local dev server: npm start
+
+  12. Nesting Components
+  <App /> is root, top of triggered
+
+  Subsequent components nest within in, and other components can nest within one another
