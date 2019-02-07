@@ -118,3 +118,15 @@ export default App;
   <App /> is root, top of triggered
 
   Subsequent components nest within in, and other components can nest within one another
+  -Point of this is to have as much modularity as possible
+
+  13. PROPS 
+  -PAss data from one parent component to another child component
+  -Props simply defined within JSX tags of a component <Class name="propName" /> and can be
+  accessed by the this.props property.  Returns object of defined props
+  **Destructured shorthand a great way to grab props and assign to a value
+  const {name, rank, race} = this.props
+
+  Remember: pass data from parent to child!!!!
+
+  14. Output Lists

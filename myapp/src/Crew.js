@@ -2,16 +2,14 @@ import React, { Component } from 'react';
 
 class Crew extends Component {
   render() {
+    console.log(this.props)
+    const {name, rank, race} = this.props
     return (
       <div className="crew">
-        <div>Name: James Kirk</div>
-        <div>Rank: Captain</div>
-        <div>Race: Human</div>
+        <div>Name: {name}</div>
+        <div>Rank: {rank}</div>
+        <div>Race: {race}</div>
       </div>
-
-
-
-
     )
   }
 }
