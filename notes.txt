@@ -129,4 +129,17 @@ export default App;
 
   Remember: pass data from parent to child!!!!
 
-  14. Output Lists
+  14. Output Lists -> Cycle through values dynamically
+  -unique keys needed when React updates keys.  Especially when dealing with data that is the same or similar, a unique key that is specific to that element, deleting it from state is certian and efficient.
+
+Best to have your items in state object to have their own key
+Ex.  state = {
+    crew: [
+      {name: 'James T. Kirk', rank: 'Captain', race: 'Human', id: 1},
+      {name: 'Spock', rank: 'Commander', race: 'Vulcan', id: 2},
+      {name: 'Leonard H. McCoy', rank: 'Doctor', race: 'Human', id: 3}
+    ]
+  }
+** MATCH PROPERTY NAME
+  key={crew.id}
+**
