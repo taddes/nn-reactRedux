@@ -143,3 +143,43 @@ Ex.  state = {
 ** MATCH PROPERTY NAME
   key={crew.id}
 **
+
+15. Stateless Components
+
+-Container Components/ Class-Based Components:
+  -Contain state
+  -Contain lifecycle hooks (how/when stuff happens)
+  ->can go out, grab data, store in state, next components within them 
+  -Not concerned with UI
+  -Use classes to create
+
+-UI components/ Stateless/ Functional Components
+  -Don't contain state
+  -Recieve data from props
+  -Only concerned with UI
+  -Use functions to create
+
+Functional comps
+Don't need render method
+Arent' class based
+Props aren't automatically passed in as they are with class-based components. Therfore, pass them in as a parap
+
+import React from 'react';
+
+const Crew = (props) => {
+  const {crew} = this.props;
+  const crewList = crew.map(crewMember => {
+    return(
+      <div className="crew" key={crewMember.id}>
+      <div>Name: {crewMember.name }</div>
+      <div>Rank: {crewMember.rank}</div>
+      <div>Race: {crewMember.race}</div>
+    </div>
+    )
+  })
+    return (
+      <div className="crew-list">
+      { crewList }
+      </div>
+    )
+  }
