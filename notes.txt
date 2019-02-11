@@ -162,7 +162,8 @@ Ex.  state = {
 Functional comps
 Don't need render method
 Arent' class based
-Props aren't automatically passed in as they are with class-based components. Therfore, pass them in as a parap
+
+**Props aren't automatically passed in as they are with class-based components. Therfore, pass them in as a param
 
 import React from 'react';
 
@@ -183,3 +184,6 @@ const Crew = (props) => {
       </div>
     )
   }
+
+  17. Forms
+  

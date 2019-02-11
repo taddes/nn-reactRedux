@@ -2,8 +2,9 @@ import React from 'react';
 
 const Crew = (props) => {
 // const Crew = ({crew}) => {
-  const {crew} = props;
-  const crewList = crew.map(crewMember => {
+  const {crews} = props;
+  const crewList = crews.map(crewMember => {
+    if (crewMember.race === 'Human') {
     return(
     <div className="crew" key={crewMember.id}>
       <div>Name: {crewMember.name }</div>
@@ -12,6 +13,7 @@ const Crew = (props) => {
       <br />
     </div>
     )
+  } 
   })
     return (
       <div className="crew-list">
