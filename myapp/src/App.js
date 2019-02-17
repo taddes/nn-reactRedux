@@ -18,11 +18,21 @@ class App extends Component {
       crews: crews
     })
   }
+  deleteCrew = (id) => {
+    // returns new array
+    let crews = this.state.crews.filter(crew => {
+      return crew.id !== id
+    });
+    this.setState({
+      crews: crews
+    })
+
+  }
   render() {
     return (
       <div className="App">
         <h1>Heyo!</h1>  
-        <Crew crews={this.state.crews}/>
+        <Crew deleteCrew={this.deleteCrew} crews={this.state.crews}/>
         <AddCrew addCrew={this.addCrew}/>
       </div>
     );
