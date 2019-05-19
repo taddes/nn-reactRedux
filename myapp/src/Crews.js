@@ -10,7 +10,7 @@ const Crews = (props) => {
       <div>Race: { crew.race }</div>
       <div>Rank: { crew.rank }</div>
     </div>
-    )
+    ) 
 });
 
   return(
