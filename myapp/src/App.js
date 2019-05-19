@@ -1,39 +1,21 @@
 import React, { Component } from 'react';
-import Crew from './Crew';
-import AddCrew from './AddCrew';
+import Crews from './Crews'
 
 class App extends Component {
   state = {
     crews: [
-      {name: 'James T. Kirk', rank: 'Captain', race: 'Human', id: 1},
-      {name: 'Spock', rank: 'Commander', race: 'Vulcan', id: 2},
-      {name: 'Leonard H. McCoy', rank: 'Doctor', race: 'Human', id: 3}
+      { name: 'James T. Kirk', rank: 'Captain', race: 'Human', id: 1 },
+      { name: 'Leonard H. McCoy', rank: 'Chief Medical Officer', race: 'Human', id: 2 },
+      { name: 'Spock', rank: 'Commander', race: 'Vulcan', id: 3 }
     ]
   }
-  addCrew = (crew) => {
-    console.log(crew)
-    crew.id = Math.random();
-    let crews = [...this.state.crews, crew]
-    this.setState({
-      crews: crews
-    })
-  }
-  deleteCrew = (id) => {
-    // returns new array
-    let crews = this.state.crews.filter(crew => {
-      return crew.id !== id
-    });
-    this.setState({
-      crews: crews
-    })
-
-  }
   render() {
-    return (
-      <div className="App">
-        <h1>Heyo!</h1>  
-        <Crew deleteCrew={this.deleteCrew} crews={this.state.crews}/>
-        <AddCrew addCrew={this.addCrew}/>
+    return(
+      <div  className="App">
+        <h1>My first React app</h1>
+        <p>Welcome :)</p>
+        <Crews crews={this.state.crews}/>
+
       </div>
     );
   }
