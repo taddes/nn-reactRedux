@@ -18,12 +18,15 @@ class App extends Component {
       crews: crews
     })
   }
+  deleteCrew = (id) => {
+    console.log(id, this.state.crews)
+  }
   render() {
     return(
       <div  className="App">
         <h1>My first React app</h1>
         <p>Welcome :)</p>
-        <Crews crews={this.state.crews}/>
+        <Crews deleteCrew={this.deleteCrew} crews={this.state.crews}/>
         <AddCrew addCrew={this.addCrew}/>
 
       </div>

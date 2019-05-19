@@ -9,6 +9,7 @@ const Crews = (props) => {
       <div>Name: { crew.name }</div>
       <div>Race: { crew.race }</div>
       <div>Rank: { crew.rank }</div>
+      <button onClick={this.props.deleteCrew(crew.id)}>Delete Crew</button>
     </div>
     ) 
 });
