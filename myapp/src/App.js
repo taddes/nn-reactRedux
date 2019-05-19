@@ -19,7 +19,15 @@ class App extends Component {
     })
   }
   deleteCrew = (id) => {
-    console.log(id, this.state.crews)
+    let crews = this.state.crews.filter(crew => {
+      return crew.id !== id;
+    });
+    this.setState({
+      crews: crews
+    });
+  }
+  componentDidMount() {
+    console.log('component mounted')
   }
   render() {
     return(
